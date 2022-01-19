@@ -5,6 +5,7 @@ with open(filename, 'r') as f:
     events_group = data['Events']
     for i in events_group:
         idev = i['competitors']
+        start_date = i['start_date']
         for x in idev:
             Team_name = x['name']
             Team_qualifier = x['qualifier']
@@ -16,6 +17,6 @@ with open(filename, 'r') as f:
             elif Team_qualifier == 'away':
                 print(f'{Team_name} is {Team_qualifier}')
         if away_winner > home_winner and Team_qualifier == 'away':
-            print(f'The away team will win with: {away_winner} {Team_name}')
+            print(f'The away team will win with: {away_winner} {Team_name}, start date {start_date}')
         else:
-            print(f'The home team will win with: {home_winner}')
+            print(f'The home team will win with: {home_winner}, start date {start_date}')
