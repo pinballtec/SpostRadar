@@ -5,4 +5,9 @@ with open(filename, 'r') as f:
     events_group = data['Events']
     for i in events_group:
         idev = i['competitors']
-        print(idev)
+        for x in idev:
+            Team_name = x['name']
+            Team_qualifier = x['qualifier']
+            away_winner = i['probability_away_team_winner']
+            home_winner = i['probability_home_team_winner']
+            draw = i['probability_draw']
