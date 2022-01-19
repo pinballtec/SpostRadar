@@ -15,3 +15,7 @@ with open(filename, 'r') as f:
                 print(f'{Team_name} is {Team_qualifier}')
             elif Team_qualifier == 'away':
                 print(f'{Team_name} is {Team_qualifier}')
+        if away_winner > home_winner and Team_qualifier == 'away':
+            print(f'The away team will win with: {away_winner} {Team_name}')
+        else:
+            print(f'The home team will win with: {home_winner}')
