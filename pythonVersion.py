@@ -11,3 +11,7 @@ with open(filename, 'r') as f:
             away_winner = i['probability_away_team_winner']
             home_winner = i['probability_home_team_winner']
             draw = i['probability_draw']
+            if Team_qualifier == 'home':
+                print(f'{Team_name} is {Team_qualifier}')
+            elif Team_qualifier == 'away':
+                print(f'{Team_name} is {Team_qualifier}')
