@@ -6,6 +6,7 @@ with open(filename, 'r') as f:
     for i in events_group:
         idev = i['competitors']
         start_date = i['start_date']
+        venue = i['venue']
         for x in idev:
             Team_name = x['name']
             Team_qualifier = x['qualifier']
