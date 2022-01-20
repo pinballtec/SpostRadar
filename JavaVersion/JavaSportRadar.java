@@ -1,6 +1,4 @@
 import java.io.*;
-import java.util.*;
-import org.json.simple.*;
 import org.json.simple.parser.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -22,18 +20,24 @@ public class JavaSportRadar {
                 Number probability_draw = (Number) Events.get("probability_draw");
                 Number probability_away_team_winner = (Number) Events.get("probability_away_team_winner");
                 String start_date = (String) Events.get("start_date");
-                System.out.print(start_date + " ");
-//                System.out.println("Home team winner: " + probability_home_team_winner);
-//                System.out.println("Away team winner: " + probability_away_team_winner);
+                System.out.print("\nTime and Date: " + start_date + "\n");
+                JSONObject location = (JSONObject) Events.get("venue");
+//                String location_end = (String) location.get("name");
+//                System.out.print("Location: " + location_end);
+              System.out.println("Home team winner: " + probability_home_team_winner);
+              System.out.println("Away team winner: " + probability_away_team_winner);
 //                  System.out.println(Events);
                 JSONArray array = (JSONArray)Events.get("competitors");
+
+
 
                 for (int a=0;a<array.size();a++){
                     JSONObject team_name = (JSONObject)array.get(a);
                     String name = (String) team_name.get("name");
                     String qualifier = (String) team_name.get("qualifier");
-                    System.out.print(" Team name is: " + name + ",");
-                    System.out.print(" Team qualifier is  " + qualifier + ", ");
+                    System.out.print("Team name is: " + name + " ");
+                    System.out.print("Team qualifier is " + qualifier + "\n");
+                    System.out.print("");
                 }
                 }
 
@@ -43,8 +47,8 @@ public class JavaSportRadar {
                 //System.out.println(iterator.next());
             //}
         } catch(Exception e) {
-            e.printStackTrace();
         }
+
 
         }
     }
