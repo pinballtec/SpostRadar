@@ -29,7 +29,9 @@ public class JavaSportRadar {
                 for (int a=0;a<array.size();a++){
                     JSONObject team_name = (JSONObject)array.get(a);
                     String name = (String) team_name.get("name");
+                    String qualifier = (String) team_name.get("qualifier");
                     System.out.print(" Team name is: " + name + ",");
+                    System.out.print(" Team qualifier is  " + qualifier + ",");
                 }
                 }
 
