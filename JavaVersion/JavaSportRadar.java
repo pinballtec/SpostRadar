@@ -21,13 +21,19 @@ public class JavaSportRadar {
                 Number probability_home_team_winner = (Number) Events.get("probability_home_team_winner");
                 Number probability_draw = (Number) Events.get("probability_draw");
                 Number probability_away_team_winner = (Number) Events.get("probability_away_team_winner");
-                JSONArray competitors = (JSONArray) Events.get("competitors");
 //                System.out.println("Home team winner: " + probability_home_team_winner);
 //                System.out.println("Away team winner: " + probability_away_team_winner);
-//                System.out.println("Draw: " + probability_draw);
-                  System.out.println("Teams" + competitors);
+//                  System.out.println(Events);
+                JSONArray array = (JSONArray)Events.get("competitors");
 
-            }
+                for (int a=0;a<array.size();a++){
+                    JSONObject team_name = (JSONObject)array.get(a);
+                    String name = (String) team_name.get("name");
+                    System.out.print(" Team name is: " + name + ",");
+                }
+                }
+
+
             //Iterator iterator = subjects.iterator();
             //while (iterator.hasNext()) {
                 //System.out.println(iterator.next());
