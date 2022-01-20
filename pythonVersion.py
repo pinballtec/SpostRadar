@@ -20,9 +20,9 @@ with open(filename, 'r') as f:
                 elif Team_qualifier == 'away':
                     print(f'{Team_name} is {Team_qualifier}')
             if away_winner > home_winner and Team_qualifier == 'away':
-                print(f'The away team will win with: {away_winner}, {Team_name}, start date {start_date} on {location}')
+                print(f'The away team will win with: {away_winner}, {Team_name},\nstart date {start_date} on {location}')
             else:
-                print(f'The home team will win with: {home_winner}, start date {start_date} on {location}\n')
+                print(f'The home team will win with: {home_winner},\nstart date {start_date} on {location}\n')
         except TypeError:
             for x in idev:
                 Team_name = x['name']
@@ -35,8 +35,8 @@ with open(filename, 'r') as f:
                 elif Team_qualifier == 'away':
                     print(f'{Team_name} is {Team_qualifier}')
             if away_winner > home_winner and Team_qualifier == 'away':
-                print(f'The away team will win with: {away_winner} {Team_name}, start date {start_date}, no info for location')
+                print(f'The away team will win with: {away_winner} {Team_name},\nstart date {start_date}, no info for location')
             else:
-                print(f'The home team will win with: {home_winner}, start date {start_date}, no info for location\n')
+                print(f'The home team will win with: {home_winner},\nstart date {start_date}, no info for location\n')
 
 
