@@ -21,6 +21,8 @@ public class JavaSportRadar {
                 Number probability_home_team_winner = (Number) Events.get("probability_home_team_winner");
                 Number probability_draw = (Number) Events.get("probability_draw");
                 Number probability_away_team_winner = (Number) Events.get("probability_away_team_winner");
+                String start_date = (String) Events.get("start_date");
+                System.out.print(start_date + " ");
 //                System.out.println("Home team winner: " + probability_home_team_winner);
 //                System.out.println("Away team winner: " + probability_away_team_winner);
 //                  System.out.println(Events);
@@ -31,7 +33,7 @@ public class JavaSportRadar {
                     String name = (String) team_name.get("name");
                     String qualifier = (String) team_name.get("qualifier");
                     System.out.print(" Team name is: " + name + ",");
-                    System.out.print(" Team qualifier is  " + qualifier + ",");
+                    System.out.print(" Team qualifier is  " + qualifier + ", ");
                 }
                 }
 
